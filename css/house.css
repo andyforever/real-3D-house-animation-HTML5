@@ -1,0 +1,324 @@
+body {
+    background-color: #333333;
+}
+
+.fontStyle {
+    font-family: segoe Script;
+    font-size: 40px;
+    line-height: 8em;
+    text-align: center;
+    color: #fff;
+}
+
+#view {
+    -webkit-perspective: 1600;
+    -webkit-perspective-origin: 50% 200px;
+    -moz-perspective: 1600;
+    -moz-perspective-origin: 50% 200px;
+    /*    background-color: rgba(193, 186, 246, 0.5);*/
+}
+
+.perspective {
+    -webkit-transition: -webkit-perspective 1s linear;
+    -moz-transition: -moz-perspective 1s linear;
+    -webkit-transition-property: all;
+}
+
+#camera {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    width: 12px;
+    height: 12px;
+    -webkit-transform: translateZ(1200px);
+    background-color: red;
+}
+
+#house {
+    position: relative;
+    margin: 300px 800px 0;
+    height: 1200px;
+    width: 1200px;
+    -webkit-transition: -webkit-transform 2s linear;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: -moz-transform 2s linear;
+    -moz-transform-style: preserve-3d;
+}
+
+.wall {
+    position: absolute;
+    padding: 20px;
+    margin: 300px 300px 0;
+    background-color: rgba(50, 50, 50, 0.7);
+    font-size: 27px;
+    line-height: 1em;
+    color: #000;
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+#top {
+    background-color: rgba(50, 50, 50, 0.7);
+    height: 760px;
+    width: 860px;
+    -webkit-transform: rotateX(90deg) translateY(-100px) translateZ(400px);
+    -moz-transform: rotateX(90deg) translateY(-100px) translateZ(400px);
+}
+
+#front {
+    background-color: rgba(0, 50, 50, 0);
+    background-image: url("../res/fence.png");
+    background-repeat: repeat-x;
+    height: 127px;
+    width: 460px;
+    border: 0px solid #555;
+    -webkit-transform: translateX(400px) translateY(305px) translateZ(550px);
+    -moz-transform: translateX(400px) translateY(305px) translateZ(550px);
+}
+
+#right {
+    background-color: rgba(230, 218, 206, 1);
+    height: 360px;
+    width: 1260px;
+    -webkit-transform: rotateY(90deg) translateX(100px) translateZ(650px);
+    -moz-transform: rotateY(90deg) translateX(100px) translateZ(650px);
+}
+
+#back {
+    background-color: rgba(230, 218, 206, 1);
+    height: 360px;
+    width: 1260px;
+    -webkit-transform: rotateY(180deg) translateZ(750px);
+    -moz-transform: rotateY(180deg) translateZ(750px);
+}
+
+#left {
+    background-color: rgba(230, 218, 206, 1);
+    height: 360px;
+    width: 360px;
+    -webkit-transform: rotateY(-90deg) translateX(-550px) translateZ(200px);
+    -moz-transform: rotateY(-90deg) translateX(-550px) translateZ(200px);
+}
+
+#bottom {
+	height: 1260px;
+    width: 1260px;
+    background-image: url("../res/floor4.jpg");
+    -webkit-transform: rotateX(-90deg) rotate(180deg) translateY(-100px) translateZ(-250px);
+    -moz-transform: rotateX(-90deg) rotate(180deg) translateY(-100px) translateZ(-250px);
+}
+
+#wall1 {
+    background-color: rgba(230, 218, 206, 1);
+    height: 360px;
+    width: 560px;
+    -webkit-transform: rotateY(-90deg) translateX(250px) translateZ(-600px);
+    -moz-transform: rotateY(-90deg) translateX(250px) translateZ(-600px);
+}
+
+#wall2 {
+    background-color: rgba(230, 218, 206, 1);
+    /*background-image: url("../res/wallpaper.jpg");*/
+    height: 360px;
+    width: 210px;
+    -webkit-transform: translateX(1050px) translateZ(-250px);
+    -moz-transform: translateX(1050px) translateZ(-250px);
+}
+
+#decorate {
+    position: absolute;
+    width: 200px;
+    height: 163px;
+    top: 25px;
+    left: 25px;
+    background-image: url("../res/photo.png");
+}
+
+.window {
+    position: absolute;
+    width: 300px;
+    height: 263px;
+    background-image: url("../res/backwindow.png");
+}
+
+#window1 {
+    left: 50px;
+    top: 50px;
+}
+
+#window2 {
+    right: 50px;
+    top: 50px;
+}
+
+#wall3 {
+    background-color: rgba(0, 50, 50, 0.4);
+    background-image: url("../res/outdoor.png");
+    height: 360px;
+    width: 460px;
+    -webkit-transform: translateX(400px)  translateZ(450px);
+    -moz-transform: translateX(400px) translateZ(450px);
+}
+
+.door {
+    position: absolute;
+    width: 133px;
+    height: 350px;
+}
+
+#door1 {
+    left: 118px;
+    top: 22px;
+    -webkit-transform-origin: 0 50%;
+    background-image: url("../res/door3.png");
+}
+
+#door2 {
+    left: 250px;
+    top: 22px;
+    -webkit-transform-origin: 100% 50%;
+    background-image: url("../res/door4.png");
+}
+
+#wall4 {
+    background-color: rgba(230, 218, 206, 1);
+    background-image: url("../res/wallpaper.jpg");
+    height: 360px;
+    width: 210px;
+    -webkit-transform: translateX(1050px) translateZ(50px);
+    -moz-transform: translateX(1050px) translateZ(50px);
+}
+
+#wall5 {
+    background-color: rgba(230, 218, 206, 1);
+    height: 360px;
+    width: 560px;
+    -webkit-transform: rotateY(-90deg) translateX(250px) translateZ(-100px);
+    -moz-transform: rotateY(-90deg) translateX(250px) translateZ(-100px);
+}
+
+#wall6 {
+    /*background-color: rgba(230, 218, 206, 1);*/
+    /*background-image: url("../res/menkuang.png");*/
+   background-image: url("../res/chuang.png");
+   background-repeat:no-repeat;
+    height: 360px;
+    width: 360px;
+    -webkit-transform: translateX(900px) translateZ(550px);
+    -moz-transform: translateX(900px) translateZ(550px);
+}
+#men {
+    position: absolute;
+    width: 201px;
+    height: 380px;
+    left: 10px;
+    top: 12px;
+    -webkit-transform-origin: 100% 50%;
+    background-image: url("../res/men.png");
+}
+.doorOpen {
+    -webkit-transition: -webkit-transform 2s ease;
+    -moz-transition: -moz-transform 2s ease;
+    -webkit-transition-property: all;
+}
+
+#wall7 {
+    background-color: rgba(230, 218, 206, 1);
+    height: 360px;
+    width: 260px;
+    -webkit-transform: rotateY(-90deg) translateX(-500px) translateZ(-150px);
+    -moz-transform: rotateY(-90deg) translateX(-500px) translateZ(-150px);
+}
+
+#wall8 {
+    background-color: rgba(230, 218, 206, 1);
+    height: 360px;
+    width: 460px;
+    -webkit-transform: rotateY(-90deg) translateX(-500px) translateZ(-650px);
+    -moz-transform: rotateY(-90deg) translateX(-500px) translateZ(-650px);
+}
+
+#wall9 {
+    background-color: rgba(230, 218, 206, 1);
+    height: 360px;
+    width: 360px;
+    -webkit-transform: translateX(0px) translateZ(-350px);
+    -moz-transform: translateX(0px) translateZ(-350px);
+}
+
+#wall10 {
+    /*background-color: rgba(230, 218, 206, 1);*/
+    /*background-image: url("../res/menkuang.png");*/
+   background-image: url("../res/chuang.png");
+   background-repeat:no-repeat;
+    height: 360px;
+    width: 360px;
+    -webkit-transform: translateX(0px) translateZ(550px);
+    -moz-transform: translateX(0px) translateZ(550px);
+}
+
+#wall11 {
+    background-color: rgba(230, 218, 206, 1);
+    height: 360px;
+    width: 560px;
+    -webkit-transform: rotateY(-90deg) translateX(250px) translateZ(300px);
+    -moz-transform: rotateY(-90deg) translateX(250px) translateZ(300px);
+}
+
+#wall12 {
+    background-color: rgba(230, 218, 206, 1);
+    height: 360px;
+    width: 360px;
+    -webkit-transform: translateX(0px) translateZ(-50px);
+    -moz-transform: translateX(0px) translateZ(-50px);
+}
+
+#wall13 {
+     background-color: rgba(230, 255, 206, 0.3);
+     background-image: url("../res/menkuang.png");
+    height: 360px;
+    width: 260px;
+    -webkit-transform: rotateY(-90deg) translateX(-200px) translateZ(150px);
+    -moz-transform: rotateY(-90deg) translateX(-200px) translateZ(150px);
+}
+
+#wall14 {
+    background-color: rgba(230, 218, 206, 1);
+    background-image: url("../res/photowall.jpg");
+    height: 360px;
+    width: 460px;
+    -webkit-transform: rotateY(-90deg) translateX(300px) translateZ(-1049px);
+    -moz-transform: rotateY(-90deg) translateX(300px) translateZ(-1049px);
+}
+
+#wall15 {
+    background-color: rgba(230, 218, 206, 1);
+    background-image: url("../res/wallpaper1.jpg");
+    height: 360px;
+    width: 560px;
+    -webkit-transform: rotateY(90deg) translateX(-250px) translateZ(602px);
+    -moz-transform: rotateY(90deg) translateX(-350px) translateZ(602px);
+}
+
+#wall16 {
+    background-color: rgba(230, 218, 206, 0.6);
+    background-position: 50px 50px;
+    background-repeat:no-repeat;
+    height: 360px;
+    width: 560px;
+    -webkit-transform: rotateY(-90deg) translateX(250px) translateZ(-100px);
+    -moz-transform: rotateY(-90deg) translateX(250px) translateZ(-100px);
+}
+
+.tv {
+    background-color: rgba(230, 218, 206, 0.6);
+    background-image: url("../res/tv.png");
+    background-position: 50px 50px;
+    background-repeat:no-repeat;
+}
+
+#video {
+    position: absolute;
+    left: 68px; 
+    top: 65px;
+}
